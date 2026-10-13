@@ -1,0 +1,21 @@
+MULTIPLE INHERITANCE (Concept Only)
+===================================
+Multiple inheritance = one child class having TWO or more parent classes.
+
+    Teacher     Researcher
+        \         /
+         Professor            class Professor extends Teacher, Researcher   // ILLEGAL in Java
+
+Why Java does not allow it
+--------------------------
+If both parents define the same method (say display()), then calling
+professor.display() is ambiguous - which parent's version should run?
+Also, if both parents inherit from a common grandparent, the child gets the
+grandparent's members twice (the "Diamond Problem").
+Java removes this risk by allowing only single class inheritance:
+a class can extend only ONE class.
+
+Legal alternatives (without interfaces)
+---------------------------------------
+1. Multilevel inheritance:  A -> B -> C
+2. Composition ("has-a"):   Professor extends Teacher and holds a Researcher object.

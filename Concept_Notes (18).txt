@@ -1,0 +1,25 @@
+HYBRID INHERITANCE (Concept Only)
+=================================
+Hybrid inheritance = a combination of two or more basic types
+(single, multilevel, hierarchical, multiple).
+
+Example structure used in this folder:
+
+            Person
+              |            <- multilevel link
+           Employee
+            /    \         <- hierarchical link
+       Doctor    Nurse
+
+Every class has only ONE parent, so this hybrid is legal in Java.
+
+The "classic" hybrid, the DIAMOND:
+
+              A
+             / \
+            B   C
+             \ /
+              D     // D extends B, C  -> needs multiple class inheritance
+
+This version is NOT possible with classes in Java, because D would receive
+A's members through both B and C (ambiguity).
